@@ -1,0 +1,22 @@
+// Colors
+
+$color-white: #ffffff;
+$color-dark: #2d383f;
+$color-blue: #0266c1;
+
+$color-status-active: #1c3374;
+$color-status-disabled: #999999;
+$color-hover-link: rgba(2, 102, 193, 0.1);
+
+$color-error: #ff121f;
+
+// Overlay
+
+$overlay-slider: linear-gradient(143deg, rgba(15, 20, 41, 0.33) 0%, rgba(15, 20, 41, 0.33) 100%);
+$overlay-cards: linear-gradient(0deg, rgba(0, 0, 0, 0.6) 61.9%, rgba(0, 0, 0, 0.6) 100%);
+
+// Breakpoints
+
+$desktop-width: 1440px;
+$tablet-width: 768px;
+$mobile-width: 320px;
