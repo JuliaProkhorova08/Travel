@@ -1,21 +1,62 @@
 <!DOCTYPE html>
 <html lang="ru" data-validate="html">
 
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SUPERGYM</title>
-    <link rel="stylesheet" href="sass/style.scss">
-  </head>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content=" LIFETOUR. Организация походов в горы.">
+  <title>LIFETOUR</title>
+  <link rel="preload" href="fonts/Montserrat-Bold.ttf" as="font" type="font/ttf" crossorigin="anonymous">
+  <link rel="preload" href="fonts/Montserrat-ExtraBold.ttf" as="font" type="font/ttf" crossorigin="anonymous">
+  <link rel="preload" href="fonts/Montserrat-Light.ttf" as="font" type="font/ttf" crossorigin="anonymous">
+  <link rel="preload" href="fonts/Montserrat-Medium.ttf" as="font" type="font/ttf" crossorigin="anonymous">
+  <link rel="preload" href="fonts/Montserrat-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
+  <link rel="preload" href="fonts/Montserrat-SemiBold.ttf" as="font" type="font/ttf" crossorigin="anonymous">
+  <link rel="icon" href="favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="img/favicons/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="img/favicons/favicon-16.png">
+  <link rel="stylesheet" href="sass/style.scss">
+</head>
 
-  <body class="page-body">
-    <!-- пример использования спрайта -->
-    <img src="/__spritemap#sprite-logo-view" alt="Это спрайт">
-    <svg>
-      <use href="/__spritemap#sprite-user"></use>
-    </svg>
-    <!-- примеры требуемых атрибутов data-test="*" -->
-    <div data-test="header">header</div>
+<body class="body">
+  <div class="wrapper">
+    <div class="header" id="header" data-test="header">
+      <div class="header__container container">
+        <nav class="header__nav nav nav--close nav--nojs">
+          <a class="nav__logo logo" href="index.html" aria-current="page">
+            <picture>
+              <img src="img/logo.svg" width="142" height="42" alt="Логотип компании Lifetour.">
+            </picture>
+          </a>
+          <button class="nav__menu button-reset" type="button">
+            <span class="visually-hidden">Открыть/закрыть меню.</span>
+          </button>
+          <ul class="nav__list list-reset">
+            <li class="nav__item">
+              <a class="nav__link link-reset" href="#tours">Туры</a>
+            </li>
+            <li class="nav__item">
+              <a class="nav__link link-reset" href="#training">Обучение</a>
+            </li>
+            <li class="nav__item">
+              <a class="nav__link link-reset" href="#about">О нас</a>
+            </li>
+            <li class="nav__item">
+              <a class="nav__link link-reset" href="#reviews">Отзывы</a>
+            </li>
+            <li class="nav__item">
+              <a class="nav__link link-reset" href="#gallery">Фотографии</a>
+            </li>
+            <li class="nav__item">
+              <a class="nav__link link-reset" href="#form">Контакты</a>
+            </li>
+          </ul>
+        </nav>
+
+      </div>
+
+    </div>
+
     <div data-test="hero">hero</div>
     <div data-test="tours">tours</div>
     <div data-test="training">training</div>
@@ -26,6 +67,7 @@
     <div data-test="form">form</div>
     <div data-test="footer">footer</div>
     <script type="module" src="js/main.js"></script>
-  </body>
+  </div>
+</body>
 
 </html>
