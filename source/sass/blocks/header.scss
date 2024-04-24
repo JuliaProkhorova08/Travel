@@ -1,28 +1,32 @@
 .header {
-  color: $color-white;  
+  color: $color-white;
+
   background-color: $color-blue;
 }
 
 .header__container {
-  padding-top: 15px;
+  position: relative;
+
+  margin-bottom: 3px;
+  padding: 15px;
 
   @media (min-width: $tablet-width) {
+    width: 768px;
+    margin-bottom: -16px;
     padding-top: 20px;
   }
 
   @media (min-width: $desktop-width) {
-    padding-top: 32px;
+    width: 1440px;
+    margin-bottom: -42px;
+    padding: 32px 120px;
   }
 }
 
 .header__nav {
-  padding-bottom: 13px;
+  margin-bottom: -5px;
 
   @media (min-width: $tablet-width) {
     padding-bottom: 20px;
-  }
-
-  @media (min-width: $desktop-width) {
-    padding-bottom: 32px;
   }
 }
