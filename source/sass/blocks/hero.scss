@@ -1,0 +1,79 @@
+.hero__container {
+  position: relative;
+
+  width: 320px;
+
+  @media (min-width: $tablet-width) {
+    width: 768px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 1440px;
+  }
+}
+
+.hero__pagination {
+  position: absolute;
+  right: 0;
+  bottom: 40px;
+  left: 0;
+  left: 50%;
+  z-index: 1;
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 180px;
+  margin: 0;
+  padding: 0;
+
+  transform: translate(-50%, 0);
+
+  gap: 20px;
+
+  @media (min-width: $desktop-width) {
+    bottom: 92px;
+
+    justify-content: end;
+    width: 1200px;
+    max-width: initial;
+  }
+}
+
+.hero__point {
+  z-index: 1;
+
+  display: block;
+  width: 16px;
+  height: 16px;
+
+  list-style: none;
+  font-size: 0;
+  color: transparent;
+
+  border-radius: 50%;
+  outline: 1px solid #ffffff;
+  outline-offset: -1px;
+  cursor: pointer;
+
+  @media (min-width: $tablet-width) {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+.hero__point--active {
+  background-color: #ffffff;
+}
+
+/* li.hero__item {
+  backface-visibility: hidden;
+  visibility: hidden;
+
+  transition: visibility 1s;
+}
+
+/*li.hero__item--visible {
+  backface-visibility: visible;
+  visibility: visible;
+} */

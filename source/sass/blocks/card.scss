@@ -1,0 +1,262 @@
+li.card {
+  position: relative;
+
+  display: flex;
+  padding: 40px 15px;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    background-image: linear-gradient(112.1deg, rgba(15, 20, 41, 0.33) 17.23%, rgba(15, 20, 41, 0) 94.93%);
+  }
+
+  @media (min-width: $tablet-width) {
+    min-height: 1034px;
+    padding: 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    min-height: 800px;
+    padding-bottom: 80px;
+  }
+}
+
+.card__img {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+// обертка для основного описания тура, заголовок и текст
+.card__content {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 290px;
+  height: 472px;
+  margin: 0 auto;
+  margin-bottom: 16px;
+
+  @media (min-width: $tablet-width) {
+    width: 768px;
+    min-height: auto;
+    margin-bottom: 60px;
+  }
+
+  @media (min-width: $desktop-width) {
+    justify-content: end;
+    align-items: baseline;
+    width: 1200px;
+    margin-bottom: 0;
+  }
+}
+
+.card__content h3 {
+  position: relative;
+  z-index: 1;
+
+  margin: 104px 0 15px;
+
+  font-weight: 800;
+  font-size: 26px;
+  line-height: 26px;
+  text-align: center;
+  color: $color-white;
+
+  @media (min-width: $tablet-width) {
+    max-width: 670px;
+
+    font-size: 56px;
+    line-height: 56px;
+  }
+
+  @media (min-width: $desktop-width) {
+    max-width: 810px;
+    margin: 0 0 25px;
+
+    font-size: 77px;
+    line-height: 77px;
+    text-align: left;
+  }
+}
+
+.card__content p {
+  margin: 0 0 60px;
+  padding: 0;
+
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 20px;
+  text-align: center;
+  color: $color-white;
+
+  @media (min-width: $tablet-width) {
+    max-width: 474px;
+    margin: 0 0 35px;
+
+    font-size: 17px;
+    line-height: 24px;
+  }
+
+  @media (min-width: $desktop-width) {
+    max-width: 460px;
+
+    text-align: left;
+  }
+}
+
+.card__content--link {
+  display: block;
+  width: 180px;
+  height: 56px;
+  padding: 21px 20px 19px;
+
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 16px;
+  text-align: center;
+  color: $color-white;
+  text-decoration: none;
+
+  background-color: $color-blue;
+
+  &:hover {
+    color: #1c3374;
+
+    background-color: transparent;
+    outline: 1px solid #1c3374;
+    outline-offset: -1px;
+  }
+
+  &:focus {
+    color: #1c3374;
+
+    background-color: transparent;
+  }
+
+  &:active {
+    color: $color-white;
+
+         background-color: #1c3374;
+
+    -moz-background-color: #1c3374;
+  }
+
+  &[disabled] {
+    color: $color-white;
+
+    background-color: $color-status-disabled;
+
+    pointer-events: none;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 134px;
+  }
+}
+
+.card__photos {
+  display: none;
+
+  @media (min-width: $tablet-width) {
+    position: relative;
+    top: -12px;
+
+    display: block;
+    min-width: 442px;
+    margin-top: 58px;
+  }
+
+  @media (min-width: $desktop-width) {
+    position: absolute;
+    top: 50%;
+    right: 0;
+
+    width: 410px;
+    min-width: initial;
+    margin-top: 0;
+
+    transform: translate(0, -42%);
+  }
+}
+
+.card__photos--right {
+  position: absolute;
+  right: 0;
+  bottom: -14px;
+
+  @media (min-width: $desktop-width) {
+    right: 0;
+    bottom: -52px;
+  }
+}
+
+// обертка для текста в карточке про дни-ночи
+.card__content--wrapper {
+  display: flex;
+  align-items: center;
+
+  gap: 10px;
+
+}
+
+.card__content--info {
+  display: none;
+  align-items: center;
+  padding: 13px 20px;
+
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+  color: $color-white;
+
+  border: 1px solid rgba(255, 255, 255, 0.5);
+
+  gap: 8px;
+
+  @media (min-width: $desktop-width) {
+    display: flex;
+  }
+}
+
+.card__content-moon {
+  &::before {
+    content: "";
+
+    display: block;
+    width: 11px;
+    height: 11px;
+
+    background-color: #ffffff;
+
+    mask-image: url("/__spritemap#sprite-moon-view");
+    mask-repeat: no-repeat;
+    mask-size: 11px;
+  }
+}
+
+.card__content-level {
+  &::before {
+    content: "";
+
+    display: block;
+    width: 11px;
+    height: 11px;
+
+    background-color: #ffffff;
+
+    mask-image: url("/__spritemap#sprite-level-view");
+    mask-repeat: no-repeat;
+    mask-size: 11px;
+  }
+}
